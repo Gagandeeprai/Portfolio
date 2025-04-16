@@ -5,11 +5,6 @@
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100%;
-}
 
 body {
   font-family: 'Segoe UI', sans-serif;
