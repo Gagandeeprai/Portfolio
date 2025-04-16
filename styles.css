@@ -1,0 +1,190 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  padding: 1rem 2rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dock-navbar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(58, 58, 58, 0.43);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+}
+
+.dock-navbar a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dock-navbar a:hover {
+  transform: scale(1.2);
+  color: #00ffff;
+}
+
+
+section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+section h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+#project ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+#skills ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+#skills li:hover {
+  transform: scale(1.05);
+  border-color: #00cccc;
+}
+
+
+#education ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#education li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  padding: 1rem 2rem;
+  margin: 10px 0;
+  border-radius: 10px;
+  width: 80%;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+#education li:hover {
+  transform: scale(1.03);
+  border-color: #00cccc;
+}
+
+
+form {
+  background-color: rgba(75, 67, 67, 0.211);
+  padding: 1rem;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(22, 21, 21, 0.3);
+  color: #000;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(71, 69, 69, 0.359);
+  border: 2px solid #00ffff;
+}
+
+button {
+  background-color: #00ffff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00cccc;
+}
+
+
+@media (max-width: 768px) {
+  .dock-navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .dock-navbar a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  form {
+    width: 90%;
+  }
+}
