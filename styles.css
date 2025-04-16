@@ -77,10 +77,13 @@ section p {
 }
 
 #project ul,
-#education ul,
-#skills ul {
+#skills ul,
+#education ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #skills li,
@@ -102,6 +105,7 @@ section p {
   transform: scale(1.05);
   border-color: #00cccc;
 }
+
 
 form {
   background-color: rgba(75, 67, 67, 0.211);
