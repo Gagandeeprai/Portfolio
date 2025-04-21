@@ -8,10 +8,13 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #141e30, #243b55);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   line-height: 1.8;
-  padding-top: 70px;
-  min-height: 100vh;
+  padding-top: 80px;
+  min-height: 100dvh;
 }
 
 header {
@@ -32,33 +35,38 @@ header {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(58, 58, 58, 0.43);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
+  background: rgba(58, 58, 58, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 3rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   z-index: 998;
+  max-width: 600px;
+  width: auto;
 }
 
 .dock-navbar a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  margin: 0 2rem;
+  margin: 0 0.8rem;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.4rem;
 }
 
-.dock-navbar a:hover {
+.dock-navbar a:hover,
+.dock-navbar a:focus {
   transform: scale(1.2);
   color: #00ffff;
+  outline: none;
 }
 
 section {
-  padding: 6rem 2rem;
+  padding: 5rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,12 +76,12 @@ section {
 
 section h2 {
   color: #00ffff;
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 section p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.8;
 }
 
@@ -83,27 +91,28 @@ section p {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   justify-items: center;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+#project li,
 #skills li,
 #education li {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid #00ffff;
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s, border-color 0.3s;
   text-align: center;
-  font-size: 1.5rem;
-  max-width: 300px;
+  font-size: 1.4rem;
   width: 100%;
 }
 
+#project li:hover,
 #skills li:hover,
 #education li:hover {
   transform: scale(1.05);
@@ -112,30 +121,36 @@ section p {
 
 form {
   background-color: rgba(75, 67, 67, 0.211);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
+  gap: 1rem;
 }
 
 input,
 textarea {
-  padding: 1.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
   outline: none;
-  background-color: rgba(22, 21, 21, 0.3);
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 input:focus,
 textarea:focus {
-  background-color: rgba(71, 69, 69, 0.359);
+  background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #00ffff;
 }
 
@@ -150,20 +165,46 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: #00cccc;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141e30;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cccc;
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+
   .dock-navbar {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 95%;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    max-width: none;
   }
 
   .dock-navbar a {
-    margin: 0 0.3rem;
-    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    padding: 0.6rem;
   }
 
   section {
@@ -174,12 +215,18 @@ button:hover {
     font-size: 2rem;
   }
 
-  #skills ul,
-  #education ul {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+  section p {
+    font-size: 1.2rem;
   }
 
+  #project ul,
+  #skills ul,
+  #education ul {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  #project li,
   #skills li,
   #education li {
     font-size: 1rem;
@@ -189,6 +236,55 @@ button:hover {
   form {
     width: 90%;
   }
+
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
 }
 
+@media (max-width: 400px) {
+  body {
+    padding-top: 120px;
+  }
 
+  .dock-navbar {
+    padding: 0.3rem;
+    width: 98%;
+    gap: 0.2rem;
+  }
+
+  .dock-navbar a {
+    font-size: 0.8rem;
+    margin: 0 0.3rem;
+    padding: 0.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  #project ul,
+  #skills ul,
+  #education ul {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  #project li,
+  #skills li,
+  #education li {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
