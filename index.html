@@ -1,66 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    
-    <header>
-      <nav class="dock-navbar">
-        <a href="#about">About</a>
-        <a href="#project">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <title>Gagandeep Rai - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fixed Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dock Navigation -->
+    <div class="dock-navbar">
+    <a href="#about" class="dock-item active">
+        <div class="dock-icon"><i class="fas fa-user"></i></div>
+        <span>About</span>
+    </a>
+     <a href="#education" class="dock-item">
+        <div class="dock-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span>Education</span>
+    </a>
+    <a href="#skills" class="dock-item">
+        <div class="dock-icon"><i class="fas fa-code"></i></div>
+        <span>Skills</span>
+    </a>
+    <a href="#projects" class="dock-item">
+        <div class="dock-icon"><i class="fas fa-briefcase"></i></div>
+        <span>Projects</span>
+    </a>
+    <a href="#contact" class="dock-item">
+        <div class="dock-icon"><i class="fas fa-envelope"></i></div>
+        <span>Contact</span>
+    </a>
+</div>
 
+
+
+
+
+
+    <!-- About Section -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>I am <b>Gagandeep Rai</b> a student at RVCE | Information Science and Engineering | 1st year | </p>
+        <div class="hero-content">
+            <div class="hero-image">
+                <div class="profile-image">GR</div>
+            </div>
+            <div class="hero-text">
+                <h1 class="typing-text">Gagandeep Rai</h1>
+                <p class="subtitle">Information Science & Engineering Student</p>
+                <p class="description">
+                    Passionate first-year student at RV College of Engineering, exploring the frontiers of technology 
+                    and innovation. With a strong foundation in programming and a keen interest in emerging technologies, 
+                    I'm dedicated to creating solutions that make a difference.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="project">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Fibonacci wind turbine</strong> – A wind turbine that generates electricity using the Fibonacci sequence shaped blades</li>
-      </ul>
-    </section>
+    
 
+    <!-- Education Section -->
     <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>RV College of Engineering – B.E. in Information Science and Engineering</li>
-        <li>12th – Ambika PU College</li>
-        <li>10th – Vivekananda High School</li>
-      </ul>
+        <div class="section-header">
+            <h2>Education</h2>
+        </div>
+        <div class="content-grid">
+            <div class="card fade-in">
+                <h3>🏛️ RV College of Engineering</h3>
+                <p>
+                    <strong>Bachelor of Engineering</strong><br>
+                    Information Science and Engineering<br>
+                    Current - First Year<br>
+                    <em>Pursuing excellence in computer science and technology</em>
+                </p>
+            </div>
+            <div class="card fade-in delay-1">
+                <h3>🎓 Ambika PU College</h3>
+                <p>
+                    <strong>Pre-University Course (12th Grade)</strong><br>
+                    Completed with strong academic performance<br>
+                    <em>Foundation in Science and Mathematics</em>
+                </p>
+            </div>
+            <div class="card fade-in delay-2">
+                <h3>🏫 Vivekananda High School</h3>
+                <p>
+                    <strong>Secondary School (10th Grade)</strong><br>
+                    Strong foundation in core subjects<br>
+                    <em>Excellence in academics and extracurricular activities</em>
+                </p>
+            </div>
+        </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python</li>
-        <li>Java</li>
-        <li>C++</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Linux</li>
-        <li>Git & Github</li>
-        <li>Docker</li>
-      </ul>
+        <div class="section-header">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item fade-in">🐍 Python</div>
+            <div class="skill-item fade-in delay-1">☕ Java</div>
+            <div class="skill-item fade-in delay-2">⚡ C++</div>
+            <div class="skill-item fade-in delay-3">🌐 HTML/CSS</div>
+            <div class="skill-item fade-in">📜 JavaScript</div>
+            <div class="skill-item fade-in delay-1">🐧 Linux</div>
+            <div class="skill-item fade-in delay-2">📊 Git & GitHub</div>
+            <div class="skill-item fade-in delay-3">🐳 Docker</div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="#">
-        <input type="text" id="name" name="name" required placeholder="Enter your name" /><br />
-        <input type="email" id="email" name="email" required placeholder="Enter your email" /><br />
-        <textarea id="message" name="message" required placeholder="Enter your message"></textarea><br />
-        <button type="submit">Send</button>
-      </form>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <h2>Projects</h2>
+        </div>
+        <div class="content-grid">
+            <div class="card fade-in">
+                <h3>🌪️ Fibonacci Wind Turbine</h3>
+                <p>
+                    An innovative wind turbine design utilizing Fibonacci sequence-shaped blades for optimal 
+                    energy generation. This project combines mathematical principles with renewable energy 
+                    technology to create more efficient wind power solutions.
+                </p>
+            </div>
+            <div class="card fade-in delay-1">
+                <h3>🔬 Future Projects</h3>
+                <p>
+                    Currently exploring machine learning applications and web development projects. 
+                    Stay tuned for more innovative solutions in the fields of AI, IoT, and software development.
+                </p>
+            </div>
+        </div>
     </section>
 
-  </body>
+    <!-- Contact Section -->
+   <section id="contact">
+        <div class="section-header">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm" autocomplete="off">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..." autocomplete="off" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
