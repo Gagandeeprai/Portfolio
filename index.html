@@ -6,91 +6,173 @@
     <title>Gagandeep Rai - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Fixed Font Awesome CDN link -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Floating particles background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <!-- Dock Navigation -->
     <div class="dock-navbar">
-    <a href="#about" class="dock-item active">
-        <div class="dock-icon"><i class="fas fa-user"></i></div>
-        <span>About</span>
-    </a>
-     <a href="#education" class="dock-item">
-        <div class="dock-icon"><i class="fas fa-graduation-cap"></i></div>
-        <span>Education</span>
-    </a>
-    <a href="#skills" class="dock-item">
-        <div class="dock-icon"><i class="fas fa-code"></i></div>
-        <span>Skills</span>
-    </a>
-    <a href="#projects" class="dock-item">
-        <div class="dock-icon"><i class="fas fa-briefcase"></i></div>
-        <span>Projects</span>
-    </a>
-    <a href="#contact" class="dock-item">
-        <div class="dock-icon"><i class="fas fa-envelope"></i></div>
-        <span>Contact</span>
-    </a>
-</div>
+        <a href="#about" class="dock-item active" data-tooltip="About Me">
+            <div class="dock-icon"><i class="fas fa-user"></i></div>
+            <span>About</span>
+        </a>
+        <a href="#education" class="dock-item" data-tooltip="My Education">
+            <div class="dock-icon"><i class="fas fa-graduation-cap"></i></div>
+            <span>Education</span>
+        </a>
+        <a href="#skills" class="dock-item" data-tooltip="Technical Skills">
+            <div class="dock-icon"><i class="fas fa-code"></i></div>
+            <span>Skills</span>
+        </a>
+        <a href="#projects" class="dock-item" data-tooltip="My Projects">
+            <div class="dock-icon"><i class="fas fa-briefcase"></i></div>
+            <span>Projects</span>
+        </a>
+        <a href="#contact" class="dock-item" data-tooltip="Get In Touch">
+            <div class="dock-icon"><i class="fas fa-envelope"></i></div>
+            <span>Contact</span>
+        </a>
+    </div>
 
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-profile">
+            <span class="header-name">Gagandeep Rai</span>
+        </div>
+        <div class="header-social">
+            <a href="https://github.com/Gagandeeprai" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gagandeep-rai/" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/gagandeep26094" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gagandeep_311/" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
 
-
-
-
-
-    <!-- About Section -->
-    <section id="about">
+    <!-- Hero Section -->
+    <section id="hero">
         <div class="hero-content">
-            <div class="hero-image">
-                <div class="profile-image">GR</div>
-            </div>
-            <div class="hero-text">
-                <h1 class="typing-text">Gagandeep Rai</h1>
-                <p class="subtitle">Information Science & Engineering Student</p>
-                <p class="description">
-                    Passionate first-year student at RV College of Engineering, exploring the frontiers of technology 
-                    and innovation. With a strong foundation in programming and a keen interest in emerging technologies, 
-                    I'm dedicated to creating solutions that make a difference.
+            <div class="hero-main">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name typing-text">Gagandeep Rai</span>
+                    <span class="title-subtitle">Second Year Student</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Welcome to my portfolio! I'm an Information Science & Engineering student at RV College of Engineering. 
+                    Explore my projects, skills, and experiences below.
                 </p>
+                
+                <div class="hero-actions">
+                    <button class="cta-primary" onclick="scrollToSection('projects')">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="cta-secondary" onclick="scrollToSection('contact')">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-comments"></i>
+                    </button>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Gagandeeprai" class="social-link" data-platform="github">
+                        <i class="fab fa-github"></i>
+                        <span class="social-tooltip">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gagandeep-rai/" class="social-link" data-platform="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="social-tooltip">LinkedIn</span>
+                    </a>
+                    <a href="https://x.com/gagandeep26094" class="social-link" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="social-tooltip">Twitter</span>
+                    </a>
+                    <a href="https://www.instagram.com/gagandeep_311/" class="social-link" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-tooltip">Instagram</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <div class="profile-image">
+                    <div class="profile-ring"></div>
+                    <img src="your-img.jpg" alt="Profile" class="profile-pic">
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h1>Gagandeep Rai</h1>
+                <p class="subtitle">Information Science & Engineering Student</p>
+                <p class="description">
+                    I'm a second-year Information Science & Engineering student at RV College of Engineering, 
+                    passionate about software development, problem-solving, and exploring emerging technologies.                
+                </p>
+            </div>
+        </div>
+     </section>
 
     <!-- Education Section -->
     <section id="education">
         <div class="section-header">
-            <h2>Education</h2>
+            <h2 class="section-title">Education</h2>
         </div>
         <div class="content-grid">
-            <div class="card fade-in">
-                <h3>🏛️ RV College of Engineering</h3>
-                <p>
-                    <strong>Bachelor of Engineering</strong><br>
-                    Information Science and Engineering<br>
-                    Current - First Year<br>
-                    <em>Pursuing excellence in computer science and technology</em>
-                </p>
+            <div class="card timeline-card fade-in">
+                <div class="card-header">
+                    <div class="card-icon">🏛️</div>
+                    <h3>RV College of Engineering</h3>
+                </div>
+                <div class="card-content">
+                    <p class="card-title"><strong>Bachelor of Engineering</strong></p>
+                    <p class="card-subtitle">Information Science and Engineering</p>
+                    <p class="card-year">Current - Second Year</p>
+                    <p class="card-description"><em>2024-2028</em></p>
+                </div>
+                <div class="card-glow"></div>
             </div>
-            <div class="card fade-in delay-1">
-                <h3>🎓 Ambika PU College</h3>
-                <p>
-                    <strong>Pre-University Course (12th Grade)</strong><br>
-                    Completed with strong academic performance<br>
-                    <em>Foundation in Science and Mathematics</em>
-                </p>
+            
+            <div class="card timeline-card fade-in delay-1">
+                <div class="card-header">
+                    <div class="card-icon">🎓</div>
+                    <h3>Ambika PU College</h3>
+                </div>
+                <div class="card-content">
+                    <p class="card-title"><strong>Pre-University Course - 12th Grade</strong></p>
+                    <p class="card-subtitle"><b>PCMCs</b></p>
+                    <p class="card-description"><em>Grade: 94.84%</em></p>
+                </div>
+                <div class="card-glow"></div>
             </div>
-            <div class="card fade-in delay-2">
-                <h3>🏫 Vivekananda High School</h3>
-                <p>
-                    <strong>Secondary School (10th Grade)</strong><br>
-                    Strong foundation in core subjects<br>
-                    <em>Excellence in academics and extracurricular activities</em>
-                </p>
+            
+            <div class="card timeline-card fade-in delay-2">
+                <div class="card-header">
+                    <div class="card-icon">🏫</div>
+                    <h3>Vivekananda High School</h3>
+                </div>
+                <div class="card-content">
+                    <p class="card-title"><strong>High School - 10th Grade</strong></p>
+                    <p class="card-subtitle">State-board</p>
+                    <p class="card-description"><em>Grade: 99.52%</em></p>
+                </div>
+                <div class="card-glow"></div>
             </div>
         </div>
     </section>
@@ -98,64 +180,177 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-header">
-            <h2>Skills</h2>
+            <h2 class="section-title">Skills</h2>
         </div>
-        <div class="skills-grid">
-            <div class="skill-item fade-in">🐍 Python</div>
-            <div class="skill-item fade-in delay-1">☕ Java</div>
-            <div class="skill-item fade-in delay-2">⚡ C++</div>
-            <div class="skill-item fade-in delay-3">🌐 HTML/CSS</div>
-            <div class="skill-item fade-in">📜 JavaScript</div>
-            <div class="skill-item fade-in delay-1">🐧 Linux</div>
-            <div class="skill-item fade-in delay-2">📊 Git & GitHub</div>
-            <div class="skill-item fade-in delay-3">🐳 Docker</div>
+        <div class="coverflow-container">
+            <div class="coverflow-carousel" id="skillsCarousel">
+                <div class="skill-card active" data-skill="python">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-description">Data structures, algorithms, and web development</div>
+                </div>
+                
+                <div class="skill-card" data-skill="java">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <div class="skill-name">Java</div>
+                    <div class="skill-description">Object-oriented programming and software development</div>
+                </div>
+                
+                <div class="skill-card" data-skill="cpp">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <div class="skill-name">C++</div>
+                    <div class="skill-description">System programming and competitive coding</div>
+                </div>
+                
+                <div class="skill-card" data-skill="web">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <div class="skill-name">HTML/CSS</div>
+                    <div class="skill-description">Modern web design and responsive layouts</div>
+                </div>
+                
+                <div class="skill-card" data-skill="js">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-description">Interactive web applications and ES6+</div>
+                </div>
+                
+                <div class="skill-card" data-skill="linux">
+                    <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                    <div class="skill-name">Linux</div>
+                    <div class="skill-description">System administration and command line</div>
+                </div>
+                
+                <div class="skill-card" data-skill="git">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-name">Git & GitHub</div>
+                    <div class="skill-description">Version control and collaborative development</div>
+                </div>
+                
+                <div class="skill-card" data-skill="docker">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <div class="skill-name">Docker</div>
+                    <div class="skill-description">Containerization and deployment</div>
+                </div>
+            </div>
+            
+            <div class="coverflow-navigation">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="coverflow-indicators" id="skillsIndicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+                <span class="indicator" data-index="5"></span>
+                <span class="indicator" data-index="6"></span>
+                <span class="indicator" data-index="7"></span>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <div class="section-header">
-            <h2>Projects</h2>
+            <h2 class="section-title">Projects</h2>
         </div>
+        
         <div class="content-grid">
-            <div class="card fade-in">
-                <h3>🌪️ Fibonacci Wind Turbine</h3>
-                <p>
-                    An innovative wind turbine design utilizing Fibonacci sequence-shaped blades for optimal 
-                    energy generation. This project combines mathematical principles with renewable energy 
-                    technology to create more efficient wind power solutions.
-                </p>
+            <!-- Project 1 -->
+            <div class="card project-card fade-in">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <button class="project-link"><i class="fas fa-external-link-alt"></i></button>
+                            <button class="project-link"><i class="fab fa-github"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>🌪️ Fibonacci Wind Turbine</h3>
+                    <p class="project-description">
+                        An innovative wind turbine design utilizing Fibonacci sequence-shaped blades for optimal 
+                        energy generation. This project combines mathematical principles with renewable energy 
+                        technology to create more efficient wind power solutions.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Engineering</span>
+                        <span class="tag">Renewable Energy</span>
+                        <span class="tag">Mathematics</span>
+                    </div>
+                </div>
             </div>
-            <div class="card fade-in delay-1">
-                <h3>🔬 Future Projects</h3>
-                <p>
-                    Currently exploring machine learning applications and web development projects. 
-                    Stay tuned for more innovative solutions in the fields of AI, IoT, and software development.
-                </p>
+
+            <!-- Project 2 -->
+            <div class="card project-card fade-in delay-1">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <button class="project-link"><i class="fas fa-external-link-alt"></i></button>
+                            <button class="project-link"><i class="fab fa-github"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>🔬 Future Projects</h3>
+                    <p class="project-description">
+                        Currently exploring machine learning applications and web development projects. 
+                        Stay tuned for more innovative solutions in the fields of AI, IoT, and software development.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-   <section id="contact">
+    <section id="contact">
         <div class="section-header">
-            <h2>Contact Me</h2>
+            <h2 class="section-title">Contact Me</h2>
         </div>
         <div class="contact-container">
             <form class="contact-form" id="contactForm" autocomplete="off">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" autocomplete="off" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" autocomplete="off" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" autocomplete="off" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" autocomplete="off" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..." autocomplete="off" required></textarea>
+                    <div class="input-wrapper">
+                        <i class="fas fa-message"></i>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..." autocomplete="off" required></textarea>
+                    </div>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
             </form>
         </div>
     </section>
