@@ -89,7 +89,7 @@ body::before {
 /* -------------------- Dock Navigation -------------------- */
 .dock-navbar {
     position: fixed;
-    left: 50vw;                 /* use viewport width instead of parent */
+    left: 50vw;                      /* use viewport width instead of parent */
     bottom: env(safe-area-inset-bottom, 20px); /* safe for notches */
     transform: translateX(-50%);
     background: rgba(15, 15, 15, 0.4);
@@ -104,7 +104,7 @@ body::before {
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
     z-index: 1000;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 95%;             /* responsive */
+    max-width: 95%;                  /* responsive */
 }
 
 .dock-item {
@@ -711,7 +711,8 @@ section {
 .coverflow-container {
     position: relative;
     max-width: 1200px;
-    margin: -18px 284px;
+    /* FIX: Replace fixed margin with responsive centering */
+    margin: 0 auto; 
     perspective: 1000px;
     overflow: visible;
     padding: 2rem 0;
@@ -1290,6 +1291,12 @@ section {
         width: 42px;
         height: 42px;
     }
+    
+    /* FIX: Ensure the coverflow container is centered on smaller screens */
+    .coverflow-container {
+        margin: 0 auto;
+        padding: 2rem 1rem; /* Add horizontal padding for a little breathing room */
+    }
 }
 
 @media (max-width: 480px) {
@@ -1346,6 +1353,7 @@ section {
     }
 
     .skill-card {
+        /* FIX: Smaller card size for very small screens */
         width: 160px;
         height: 220px;
     }
@@ -1359,8 +1367,15 @@ section {
     }
 
     .dock-item span {
-        bottom: 55px;
-        font-size: 0.8rem;
+        /* Keep the tooltip hidden by default on mobile */
+        opacity: 0;
+        transform: translateY(10px) scale(0.8);
+    }
+
+    /* FIX: Active state for better mobile tap feedback */
+    .dock-item:active .dock-icon {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
     }
 }
 
@@ -1436,25 +1451,48 @@ section {
     outline-offset: 2px;
 }
 
-/* Touch device optimizations */
+/* -------------------- Touch device optimizations -------------------- */
+/* This media query explicitly targets touch/coarse pointers to disable hover effects like scaling and jumping. */
 @media (hover: none) and (pointer: coarse) {
+    /* Dock Navbar Fixes */
     .dock-item:hover .dock-icon {
-        transform: none;
+        /* Prevents the icon from jumping up and scaling on tap on phones/tablets */
+        transform: none !important;
+        box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3) !important; /* Restore default shadow */
     }
-    
+
+    .dock-item:hover .dock-icon::before {
+        /* Disable the swipe effect on hover/tap */
+        left: -100%;
+    }
+
+    .dock-item:hover span {
+        /* Keep tooltip hidden as it's not practical on touch devices */
+        opacity: 0;
+        transform: translateY(10px) scale(0.8);
+    }
+
     .dock-item:active .dock-icon {
+        /* Provides a subtle press-down effect for immediate feedback */
         transform: scale(0.95);
         transition: transform 0.1s ease;
     }
-    
+
+    /* Other Hover Effect Disables */
     .card:hover,
-    .profile-image:hover {
+    .profile-image:hover,
+    .cta-primary:hover,
+    .cta-secondary:hover {
         transform: none;
-        border-color: rgba(255, 255, 255, 0.1);
         box-shadow: none;
+        border-color: rgba(255, 255, 255, 0.1);
     }
     
-    .card:active {
+    .card:active,
+    .cta-primary:active,
+    .cta-secondary:active,
+    .social-link:active {
+        /* General active state for tap feedback */
         transform: scale(0.98);
         transition: transform 0.1s ease;
     }
@@ -1463,8 +1501,8 @@ section {
         transform: none;
     }
     
-    .social-link:active {
-        transform: scale(0.95);
-        transition: transform 0.1s ease;
+    .social-link:hover::before {
+        /* Disable hover glow */
+        opacity: 0;
     }
 }
