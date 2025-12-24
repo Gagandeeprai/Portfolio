@@ -1,360 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Gagandeep Rai - ISE Student at RV College of Engineering. Explore my portfolio of software projects." />
+    <meta name="keywords" content="Gagandeep Rai, ISE Student, Portfolio" />
+    <meta name="author" content="Gagandeep Rai" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Gagandeep Rai - ISE Student" />
+    <meta property="og:description"
+        content="ISE Student at RV College of Engineering. Explore my portfolio of software projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gagandeeprai.github.io/Portfolio/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+
     <title>Gagandeep Rai - Portfolio</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Floating particles background -->
-    <div class="particles-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
     </div>
 
     <!-- Dock Navigation -->
-    <div class="dock-navbar">
-        <a href="#about" class="dock-item active" data-tooltip="About Me">
-            <div class="dock-icon"><i class="fas fa-user"></i></div>
-            <span>About</span>
+    <nav class="dock" aria-label="Main navigation">
+        <a href="#hero" class="dock-item active" aria-label="Home">
+            <i class="fas fa-house"></i>
         </a>
-        <a href="#education" class="dock-item" data-tooltip="My Education">
-            <div class="dock-icon"><i class="fas fa-graduation-cap"></i></div>
-            <span>Education</span>
+        <a href="#about" class="dock-item" aria-label="About & Education">
+            <i class="fas fa-user"></i>
         </a>
-        <a href="#skills" class="dock-item" data-tooltip="Technical Skills">
-            <div class="dock-icon"><i class="fas fa-code"></i></div>
-            <span>Skills</span>
+        <a href="#skills" class="dock-item" aria-label="Skills">
+            <i class="fas fa-code"></i>
         </a>
-        <a href="#projects" class="dock-item" data-tooltip="My Projects">
-            <div class="dock-icon"><i class="fas fa-briefcase"></i></div>
-            <span>Projects</span>
+        <a href="#projects" class="dock-item" aria-label="Projects">
+            <i class="fas fa-briefcase"></i>
         </a>
-        <a href="#contact" class="dock-item" data-tooltip="Get In Touch">
-            <div class="dock-icon"><i class="fas fa-envelope"></i></div>
-            <span>Contact</span>
+        <a href="#contact" class="dock-item" aria-label="Contact">
+            <i class="fas fa-envelope"></i>
         </a>
-    </div>
+    </nav>
 
-    <!-- Sticky Header -->
-    <header class="sticky-header">
-        <div class="header-profile">
-            <span class="header-name">Gagandeep Rai</span>
-        </div>
-        <div class="header-social">
-            <a href="https://github.com/Gagandeeprai" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/gagandeep-rai/" class="social-link"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/gagandeep26094" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/gagandeep_311/" class="social-link"><i class="fab fa-instagram"></i></a>
-        </div>
-    </header>
+    <main>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-main">
-                <h1 class="hero-title">
-                    <span class="title-line">Hi, I'm</span>
-                    <span class="title-name typing-text">Gagandeep Rai</span>
-                    <span class="title-subtitle">Second Year Student</span>
-                </h1>
-                
-                <p class="hero-description">
-                    Welcome to my portfolio! I'm an Information Science & Engineering student at RV College of Engineering. 
-                    Explore my projects, skills, and experiences below.
-                </p>
-                
-                <div class="hero-actions">
-                    <button class="cta-primary" onclick="scrollToSection('projects')">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="cta-secondary" onclick="scrollToSection('contact')">
-                        <span>Let's Connect</span>
-                        <i class="fas fa-comments"></i>
-                    </button>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <!-- Header / Navigation -->
+            <header class="site-header">
+                <div class="container">
+                    <h2 class="logo">Gagandeep Rai</h2>
+                    <nav class="nav">
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Work</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
                 </div>
-                
-                <div class="social-links">
-                    <a href="https://github.com/Gagandeeprai" class="social-link" data-platform="github">
-                        <i class="fab fa-github"></i>
-                        <span class="social-tooltip">GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/gagandeep-rai/" class="social-link" data-platform="linkedin">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="social-tooltip">LinkedIn</span>
-                    </a>
-                    <a href="https://x.com/gagandeep26094" class="social-link" data-platform="twitter">
-                        <i class="fab fa-twitter"></i>
-                        <span class="social-tooltip">Twitter</span>
-                    </a>
-                    <a href="https://www.instagram.com/gagandeep_311/" class="social-link" data-platform="instagram">
-                        <i class="fab fa-instagram"></i>
-                        <span class="social-tooltip">Instagram</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+            </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-content">
-            <div class="about-image">
-                <div class="profile-image">
-                    <div class="profile-ring"></div>
-                    <img src="your-img.jpg" alt="Profile" class="profile-pic">
-                    <div class="profile-glow"></div>
+            <div class="container hero-content">
+                <!-- LEFT: Profile Image -->
+                <div class="hero-image">
+                    <img src="assets/your-img.jpg" alt="Gagandeep Rai - ISE Student" loading="eager" />
                 </div>
-            </div>
-            <div class="about-text">
-                <h1>Gagandeep Rai</h1>
-                <p class="subtitle">Information Science & Engineering Student</p>
-                <p class="description">
-                    I'm a second-year Information Science & Engineering student at RV College of Engineering, 
-                    passionate about software development, problem-solving, and exploring emerging technologies.                
-                </p>
-            </div>
-        </div>
-     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="section-header">
-            <h2 class="section-title">Education</h2>
-        </div>
-        <div class="content-grid">
-            <div class="card timeline-card fade-in">
-                <div class="card-header">
-                    <div class="card-icon">🏛️</div>
-                    <h3>RV College of Engineering</h3>
-                </div>
-                <div class="card-content">
-                    <p class="card-title"><strong>Bachelor of Engineering</strong></p>
-                    <p class="card-subtitle">Information Science and Engineering</p>
-                    <p class="card-year">Current - Second Year</p>
-                    <p class="card-description"><em>2024-2028</em></p>
-                </div>
-                <div class="card-glow"></div>
-            </div>
-            
-            <div class="card timeline-card fade-in delay-1">
-                <div class="card-header">
-                    <div class="card-icon">🎓</div>
-                    <h3>Ambika PU College</h3>
-                </div>
-                <div class="card-content">
-                    <p class="card-title"><strong>Pre-University Course - 12th Grade</strong></p>
-                    <p class="card-subtitle"><b>PCMCs</b></p>
-                    <p class="card-description"><em>Grade: 94.84%</em></p>
-                </div>
-                <div class="card-glow"></div>
-            </div>
-            
-            <div class="card timeline-card fade-in delay-2">
-                <div class="card-header">
-                    <div class="card-icon">🏫</div>
-                    <h3>Vivekananda High School</h3>
-                </div>
-                <div class="card-content">
-                    <p class="card-title"><strong>High School - 10th Grade</strong></p>
-                    <p class="card-subtitle">State-board</p>
-                    <p class="card-description"><em>Grade: 99.52%</em></p>
-                </div>
-                <div class="card-glow"></div>
-            </div>
-        </div>
-    </section>
+                <!-- RIGHT: Text -->
+                <div class="hero-text">
+                    <p class="hero-intro">Hi, I'm</p>
+                    <h1 class="hero-title">
+                        ISE STUDENT <span>& LEARNER</span>
+                    </h1>
+                    <p class="hero-description">
+                        Information Science & Engineering student at RV College of Engineering.
+                    </p>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-header">
-            <h2 class="section-title">Skills</h2>
-        </div>
-        <div class="coverflow-container">
-            <div class="coverflow-carousel" id="skillsCarousel">
-                <div class="skill-card active" data-skill="python">
-                    <div class="skill-icon"><i class="fab fa-python"></i></div>
-                    <div class="skill-name">Python</div>
-                    <div class="skill-description">Data structures, algorithms, and web development</div>
-                </div>
-                
-                <div class="skill-card" data-skill="java">
-                    <div class="skill-icon"><i class="fab fa-java"></i></div>
-                    <div class="skill-name">Java</div>
-                    <div class="skill-description">Object-oriented programming and software development</div>
-                </div>
-                
-                <div class="skill-card" data-skill="cpp">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <div class="skill-name">C++</div>
-                    <div class="skill-description">System programming and competitive coding</div>
-                </div>
-                
-                <div class="skill-card" data-skill="web">
-                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                    <div class="skill-name">HTML/CSS</div>
-                    <div class="skill-description">Modern web design and responsive layouts</div>
-                </div>
-                
-                <div class="skill-card" data-skill="js">
-                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                    <div class="skill-name">JavaScript</div>
-                    <div class="skill-description">Interactive web applications and ES6+</div>
-                </div>
-                
-                <div class="skill-card" data-skill="linux">
-                    <div class="skill-icon"><i class="fab fa-linux"></i></div>
-                    <div class="skill-name">Linux</div>
-                    <div class="skill-description">System administration and command line</div>
-                </div>
-                
-                <div class="skill-card" data-skill="git">
-                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                    <div class="skill-name">Git & GitHub</div>
-                    <div class="skill-description">Version control and collaborative development</div>
-                </div>
-                
-                <div class="skill-card" data-skill="docker">
-                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
-                    <div class="skill-name">Docker</div>
-                    <div class="skill-description">Containerization and deployment</div>
-                </div>
-            </div>
-            
-            <div class="coverflow-navigation">
-                <button class="nav-btn prev-btn" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-btn next-btn" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            
-            <div class="coverflow-indicators" id="skillsIndicators">
-                <span class="indicator active" data-index="0"></span>
-                <span class="indicator" data-index="1"></span>
-                <span class="indicator" data-index="2"></span>
-                <span class="indicator" data-index="3"></span>
-                <span class="indicator" data-index="4"></span>
-                <span class="indicator" data-index="5"></span>
-                <span class="indicator" data-index="6"></span>
-                <span class="indicator" data-index="7"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="section-header">
-            <h2 class="section-title">Projects</h2>
-        </div>
-        
-        <div class="content-grid">
-            <!-- Project 1 -->
-            <div class="card project-card fade-in">
-                <div class="project-image">
-                    <div class="project-placeholder">
-                        <i class="fas fa-wind"></i>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn primary">View Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                        <a href="assets/resume.pdf" class="btn secondary" download target="_blank">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
                     </div>
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <button class="project-link"><i class="fas fa-external-link-alt"></i></button>
-                            <button class="project-link"><i class="fab fa-github"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Education Combined -->
+        <section id="about" class="section about-education-section">
+            <div class="container">
+                <h2 class="section-title">About & Education</h2>
+
+                <div class="about-education-grid">
+                    <!-- Left: About -->
+                    <div class="about-column">
+                        <h3 class="subsection-title">About Me</h3>
+                        <p class="about-text">
+                            I'm a second-year ISE student at RV College of Engineering passionate about
+                            building software that solves real problems. My journey in tech started with
+                            curiosity about how systems work under the hood.
+                        </p>
+
+                        <p class="about-text">
+                            I enjoy working across the stack — from low-level C programs to full-stack
+                            web applications. When I'm not coding, you'll find me exploring new technologies.
+                        </p>
+
+                        <h4 class="interest-heading">Interests</h4>
+                        <div class="interests">
+                            <span class="interest-tag">Vibe coding</span>
+                            <span class="interest-tag">Open Source</span>
+                            <span class="interest-tag">Problem Solving</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Education -->
+                    <div class="education-column">
+                        <h3 class="subsection-title">Education</h3>
+
+                        <div class="education-list">
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <div>
+                                        <h4>RV College of Engineering</h4>
+                                        <p class="edu-degree">B.E. Information Science & Engineering</p>
+                                    </div>
+                                    <span class="edu-year">2024—28</span>
+                                </div>
+                            </div>
+
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <div>
+                                        <h4>Ambika PU College</h4>
+                                        <p class="edu-degree">Pre-University • PCMCs</p>
+                                    </div>
+                                    <span class="edu-year">94.84%</span>
+                                </div>
+                            </div>
+
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <div>
+                                        <h4>Vivekananda High School</h4>
+                                        <p class="edu-degree">State Board</p>
+                                    </div>
+                                    <span class="edu-year">99.52%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-content">
-                    <h3>🌪️ Fibonacci Wind Turbine</h3>
-                    <p class="project-description">
-                        An innovative wind turbine design utilizing Fibonacci sequence-shaped blades for optimal 
-                        energy generation. This project combines mathematical principles with renewable energy 
-                        technology to create more efficient wind power solutions.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Engineering</span>
-                        <span class="tag">Renewable Energy</span>
-                        <span class="tag">Mathematics</span>
-                    </div>
-                </div>
             </div>
+        </section>
 
-            <!-- Project 2 -->
-            <div class="card project-card fade-in delay-1">
-                <div class="project-image">
-                    <div class="project-placeholder">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <button class="project-link"><i class="fas fa-external-link-alt"></i></button>
-                            <button class="project-link"><i class="fab fa-github"></i></button>
+        <!-- Skills -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="coverflow">
+                    <button class="cf-btn left" aria-label="Previous skill">&#10094;</button>
+
+                    <div class="coverflow-track">
+                        <div class="cf-card" role="article" aria-label="C programming language">
+                            <i class="devicon-c-plain" aria-hidden="true"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="C++ programming language">
+                            <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="Python programming language">
+                            <i class="devicon-python-plain" aria-hidden="true"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="Docker containerization">
+                            <i class="devicon-docker-plain" aria-hidden="true"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="SQL database">
+                            <i class="devicon-mysql-plain" aria-hidden="true"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="Linux operating system">
+                            <i class="devicon-linux-plain" aria-hidden="true"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="Git version control">
+                            <i class="devicon-git-plain" aria-hidden="true"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="HTML5">
+                            <i class="devicon-html5-plain" aria-hidden="true"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="CSS3">
+                            <i class="devicon-css3-plain" aria-hidden="true"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="cf-card" role="article" aria-label="JavaScript">
+                            <i class="devicon-javascript-plain" aria-hidden="true"></i>
+                            <span>JavaScript</span>
                         </div>
                     </div>
+
+                    <button class="cf-btn right" aria-label="Next skill">&#10095;</button>
                 </div>
-                <div class="project-content">
-                    <h3>🔬 Future Projects</h3>
-                    <p class="project-description">
-                        Currently exploring machine learning applications and web development projects. 
-                        Stay tuned for more innovative solutions in the fields of AI, IoT, and software development.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Web Development</span>
-                        <span class="tag">IoT</span>
+            </div>
+        </section>
+
+        <!--Projects-->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>pic2ascii</h3>
+                            <span class="project-type">CLI Tool</span>
+                        </div>
+
+                        <p class="project-description">
+                            Cross-platform C++17 command-line tool that converts images into
+                            colored or grayscale ASCII art, optimized for terminal display.
+                        </p>
+
+                        <ul class="project-features">
+                            <li>Bilinear interpolation for smooth scaling</li>
+                            <li>Adaptive contrast enhancement</li>
+                            <li>Automatic terminal width detection</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+                            <span>C++17</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Gagandeeprai/pic2ascii" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>terminal-tetris</h3>
+                            <span class="project-type">Terminal-Game</span>
+                        </div>
+
+                        <p class="project-description">
+                            Terminal-based Tetris clone written in C using ncurses,
+                            featuring real-time input handling and dynamic difficulty.
+                        </p>
+
+                        <ul class="project-features">
+                            <li>Collision detection & scoring system</li>
+                            <li>Ghost piece projection</li>
+                            <li>Pause / resume & responsive controls</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <i class="devicon-c-plain" aria-hidden="true"></i>
+                            <span>C</span>
+                            <span>ncurses</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Gagandeeprai/terminal-tetris" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Portfolio Website</h3>
+                            <span class="project-type">Web</span>
+                        </div>
+
+                        <p class="project-description">
+                            Personal portfolio website built with HTML, CSS, and JavaScript,
+                            deployed using GitHub Pages with CI/CD.
+                        </p>
+
+                        <ul class="project-features">
+                            <li>Responsive design & modern layout</li>
+                            <li>Automated deployment via GitHub Actions</li>
+                            <li>Performance-optimized static site</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <i class="fab fa-html5" aria-hidden="true"></i>
+                            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                            <i class="fab fa-js" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://gagandeeprai.github.io/Portfolio/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live
+                            </a>
+                            <a href="https://github.com/Gagandeeprai" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+
+                <p class="contact-intro">
+                    I'm currently <span>open to internships</span> and collaborations.
+                    Feel free to reach out.
+                </p>
+
+                <div class="contact-center">
+                    <a href="mailto:gagandeepputtur@gmail.com" class="btn primary big-btn">
+                        <i class="fas fa-envelope"></i> Send Me an Email
+                    </a>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/gagandeep-rai" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+
+                        <a href="https://github.com/Gagandeeprai" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-header">
-            <h2 class="section-title">Contact Me</h2>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p class="footer-copyright">&copy; 2025 Gagandeep Rai. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Gagandeeprai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/gagandeep-rai" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:gagandeepputtur@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        <div class="contact-container">
-            <form class="contact-form" id="contactForm" autocomplete="off">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" autocomplete="off" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" autocomplete="off" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-message"></i>
-                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..." autocomplete="off" required></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">
-                    <span class="btn-text">Send Message</span>
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
-        </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
