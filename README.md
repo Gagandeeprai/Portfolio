@@ -5,7 +5,7 @@
 
 Welcome to my personal portfolio! This website showcases my projects, skills, and journey as a developer. Recently migrated to **Next.js** for modern features and better performance.
 
-🔗 **Live Demo:** [gagandeeprai.github.io/Portfolio](https://gagandeeprai.github.io/Portfolio/)
+🔗 **Live Demo:** [my-portfolio-gagandeeprai.vercel.app/](https://my-portfolio-gagandeeprai.vercel.app/)
 
 ## ✨ Key Features
 *   **Animated Background**: Dynamic midnight blue gradient mesh with floating orbs.
