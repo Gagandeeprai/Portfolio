@@ -54,7 +54,7 @@ export default function Hero() {
                 {/* LEFT: Profile Image */}
                 <div className="hero-image">
                     <Image
-                        src="/assets/your-img.jpg"
+                        src="/Portfolio/assets/your-img.jpg"
                         alt="Gagandeep Rai - ISE Student"
                         width={280}
                         height={280}
@@ -89,7 +89,7 @@ export default function Hero() {
                             Contact Me
                         </a>
                         <a
-                            href="/assets/resume.pdf"
+                            href="/Portfolio/assets/resume.pdf"
                             className="btn secondary"
                             download
                             target="_blank"
