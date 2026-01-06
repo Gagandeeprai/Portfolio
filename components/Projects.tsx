@@ -139,17 +139,17 @@ export default function Projects() {
                     <ProjectCard
                         title="Portfolio Website"
                         type="Web"
-                        description="Personal portfolio website built with HTML, CSS, and JavaScript, deployed using GitHub Pages with CI/CD."
+                        description="Modern portfolio built with Next.js 15, featuring 3D animations, custom interactions, and automated deployment."
                         features={[
-                            "Responsive design & modern layout",
-                            "Automated deployment via GitHub Actions",
-                            "Performance-optimized static site",
+                            "Next.js App Router & Static Export",
+                            "Framer Motion for premium animations",
+                            "Automated CI/CD via GitHub Actions",
                         ]}
                         tech={
                             <>
-                                <i className="fab fa-html5" aria-hidden="true"></i>
-                                <i className="fab fa-css3-alt" aria-hidden="true"></i>
-                                <i className="fab fa-js" aria-hidden="true"></i>
+                                <i className="devicon-nextjs-plain" aria-hidden="true"></i>
+                                <i className="devicon-typescript-plain" aria-hidden="true"></i>
+                                <i className="devicon-tailwindcss-plain" aria-hidden="true"></i>
                             </>
                         }
                         links={
