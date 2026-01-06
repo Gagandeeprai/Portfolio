@@ -3,22 +3,25 @@
 > **ISE Student & Aspiring Developer**  
 > RV College of Engineering, Bangalore
 
-Welcome to my personal portfolio! This website showcases my projects, skills, and journey as a developer. It's built with a focus on clean design, interactivity, and performance.
+Welcome to my personal portfolio! This website showcases my projects, skills, and journey as a developer. Recently migrated to **Next.js** for modern features and better performance.
 
 🔗 **Live Demo:** [gagandeeprai.github.io/Portfolio](https://gagandeeprai.github.io/Portfolio/)
 
 ## ✨ Key Features
-*   **Mac-Style Dock**: Interactive navigation with scroll-spy active states.
-*   **3D Coverflow**: Apple-inspired infinite loop skills carousel.
-*   **Dynamic Background**: Midnight Blue gradient with parallax depth.
-*   **Responsive Design**: Fully optimized for Desktop, Tablet, and Mobile.
-*   **Performance**: Pure HTML/CSS/JS (No heavy frameworks), scoring high on Lighthouse.
+*   **Animated Background**: Dynamic midnight blue gradient mesh with floating orbs.
+*   **3D Tilt Cards**: Interactive project cards that tilt in 3D based on mouse movement.
+*   **Dynamic Typewriter**: Smooth hero headline animation typing out "ISE STUDENT & LEARNER".
+*   **Enhanced Skills Carousel**: Pulsing glow effects and hover previews for a premium feel.
+*   **Mac-Style Dock**: Glassmorphism navigation bar with active section tracking.
+*   **Styled Scrollbar**: Custom cyan-themed scrollbar matching the site's aesthetic.
 
 ## 🛠️ Tech Stack
-*   **Frontend**: HTML5, CSS3 (Variables, Flexbox, Grid), JavaScript (ES6+)
+*   **Framework**: Next.js 15 (App Router)
+*   **Language**: TypeScript
+*   **Styling**: CSS3 (Vanilla), Tailwind CSS (Utilities)
+*   **Animations**: Framer Motion
 *   **Icons**: Font Awesome 6, DevIcons
-*   **Fonts**: Inter (Body), JetBrains Mono (Code/Headers)
-*   **Deployment**: GitHub Pages
+*   **Fonts**: Inter, JetBrains Mono
 
 ## 🚀 Running Locally
 
@@ -32,8 +35,23 @@ Welcome to my personal portfolio! This website showcases my projects, skills, an
     cd Portfolio
     ```
 
-3.  **Open `index.html`**
-    Simply open the file in your preferred browser, or use VS Code Live Server for the best experience.
+3.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+4.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+5.  **Open [http://localhost:3000](http://localhost:3000)** in your browser.
+
+## 📁 Project Structure
+- `/app`: Next.js App Router (Layouts, Globals, Page)
+- `/components`: Modular React components (Hero, Dock, Projects, etc.)
+- `/public`: Static assets (Images, PDF)
+- `/legacy`: Archive of the original HTML/CSS/JS version
 
 ## 📬 Contact
 Feel free to reach out for collaborations or just a chat!
@@ -42,4 +60,4 @@ Feel free to reach out for collaborations or just a chat!
 *   **GitHub**: [Gagandeeprai](https://github.com/Gagandeeprai)
 
 ---
-&copy; 2025 Gagandeep Rai. All rights reserved.
+&copy; 2026 Gagandeep Rai. All rights reserved.
