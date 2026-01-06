@@ -47,7 +47,21 @@ Welcome to my personal portfolio! This website showcases my projects, skills, an
 
 5.  **Open [http://localhost:3000](http://localhost:3000)** in your browser.
 
-## 📁 Project Structure
+## � Deployment
+
+This project is configured for automatic deployment to **GitHub Pages** using GitHub Actions.
+
+### Setup Instructions:
+1.  **Repository Settings**:
+    - Go to your repository on GitHub.
+    - Click on **Settings** > **Pages**.
+    - Under **Build and deployment** > **Source**, select **GitHub Actions**.
+2.  **Push to Main**:
+    - Whenever you push changes to the `main` branch, the [Deploy Next.js site to Pages](.github/workflows/deploy.yml) workflow will automatically build and deploy your site.
+3.  **Static Export**:
+    - The site is deployed as a static export (`output: 'export'`). This means it will work perfectly on GitHub Pages without needing a Node.js server.
+
+## �📁 Project Structure
 - `/app`: Next.js App Router (Layouts, Globals, Page)
 - `/components`: Modular React components (Hero, Dock, Projects, etc.)
 - `/public`: Static assets (Images, PDF)
