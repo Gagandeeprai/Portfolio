@@ -155,7 +155,7 @@ export default function Projects() {
                         links={
                             <>
                                 <a
-                                    href="https://gagandeeprai.github.io/Portfolio/"
+                                    href="https://my-portfolio-gagandeeprai.vercel.app/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
