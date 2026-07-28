@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://gagandeeprai.github.io/Portfolio/",
   },
+  verification: {
+    google: "4gqmdGQPWyNvIhR1NjjAyo2UHSwmTfNMA_H5OHXeXQs",
+  },
 };
 
 export default function RootLayout({
