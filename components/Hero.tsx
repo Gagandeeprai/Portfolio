@@ -54,7 +54,7 @@ export default function Hero() {
                 {/* LEFT: Profile Image */}
                 <div className="hero-image">
                     <Image
-                        src="/assets/your-img.jpg"
+                        src="/assets/your-img%20(2).jpg"
                         alt="Gagandeep Rai - ISE Student"
                         width={280}
                         height={280}
